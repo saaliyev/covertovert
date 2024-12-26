@@ -1,18 +1,27 @@
 {
-  "covert_channel_code": "Replace it with the [Code] of chosen covert channel type seen in ODTUClass.",
-  "send": {
-    "parameters": {
-      "parameter1": "p1",
-      "parameter2": 1234,
-      "log_file_name": "Example_UDPTimingInterarrivalChannelSender.log"
-    }
-  },
-  "receive": {
-    "parameters": {
-      "parameter1": "p1",
-      "parameter2": 1234,
-      "parameter3": "p3",
-      "log_file_name": "Example_UDPTimingInterarrivalChannelReceiver.log"
+    "covert_channel_code": "CSC-PSV-LLC-PACKET-BURST",
+    "send": {
+      "parameters": {
+        "log_file_name": "send_log.txt",
+        "interface": "eth0",
+        "destination_mac": "02:42:ac:12:00:03",
+        "burst_mapping": {
+          "0": 1,
+          "1": 2
+        },
+        "burst_interval": 0.07
+      }
+    },
+    "receive": {
+      "parameters": {
+        "log_file_name": "receive_log.txt",
+        "interface": "eth0",
+        "burst_interval": 0.07,
+        "burst_mapping": {
+          "0": 1,
+          "1": 2
+        }
+      }
     }
   }
-}
+  
