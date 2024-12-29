@@ -42,8 +42,8 @@ To measure the covert channel capacity:
 
 ### Results
 
-- Total Time: X.XX seconds (replace with your calculated time).
-- Covert Channel Capacity: XX.XX bps (replace with your calculated capacity).
+- Total Time: 12.07 seconds.
+- Covert Channel Capacity: 10.66 bps.
 
 ---
 
