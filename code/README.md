@@ -11,6 +11,7 @@ This project implements a covert channel using packet bursting with the Logical 
 - Includes termination signals to indicate the end of communication.
 - Implements a decoding mechanism based on burst sizes.
 - Configurable parameters for burst size, burst interval, and network interfaces.
+- The project aims to maximize the covert channel capacity (bits per second) while ensuring accurate decoding by the receiver.
 
 ---
 
@@ -23,6 +24,7 @@ This project implements a covert channel using packet bursting with the Logical 
      - `1`: 2 packets
    - Adds a termination signal (".") at the end of the message.
    - Sends LLC packets with specified intervals between bursts.
+   - Transmission: Packets are sent over the specified network interface using the LLC protocol with a burst interval of 0.06 seconds, optimized for minimizing packet loss while maintaining a high data rate.
 
 2. Receiver:
    - Listens for incoming packets on the specified network interface.
@@ -44,6 +46,8 @@ To measure the covert channel capacity:
 
 - Total Time: 12.07 seconds.
 - Covert Channel Capacity: 10.66 bps.
+
+We optimized the burst interval to 0.06 seconds, which provided the best balance between transmission speed and packet accuracy.
 
 ---
 
