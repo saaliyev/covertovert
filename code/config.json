@@ -9,14 +9,14 @@
           "0": 1,
           "1": 2
         },
-        "burst_interval": 0.2
+        "burst_interval": 0.06
       }
     },
     "receive": {
       "parameters": {
         "log_file_name": "receive_log.txt",
         "interface": "eth0",
-        "burst_interval": 0.2,
+        "burst_interval": 0.06,
         "burst_mapping": {
           "0": 1,
           "1": 2
